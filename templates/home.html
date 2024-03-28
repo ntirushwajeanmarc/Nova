@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <!-- Include Prism.js -->
+<!-- Include highlight.js -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- END OF STYLES -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <title>{% block title %}Novahealth.com{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="/">Novahealth</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/book">Book the apartment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/service">Services</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="color: white;">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      {% block body %}
+      <div class="container">
+        <h1 class="mt-5 mb-4">QUICK TOUR TO THE APARTMENTS AND ROOMS</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="{{ url_for('static', filename='image/image1.jpg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="material-symbols-outlined">
+                  bed2
+                  </span>
+                <h5 class="card-title">{{roomPrice[0]}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/book" class="btn btn-primary">Book</a>
+              </div>
+            </div>
+          </div>
+         <!-- second -->
+         <div class="col-md-4">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='image/image2.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span class="material-symbols-outlined">
+                bed2
+                </span>
+              <h5 class="card-title">{{roomPrice[1]}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="/book" class="btn btn-primary">Book</a>
+            </div>
+          </div>
+        </div>
+        <!--third  -->
+            <div class="col-md-4">
+            <div class="card" >
+              <img src="{{ url_for('static', filename='image/image3.jpg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="material-symbols-outlined">
+                  bed2
+                  </span>
+                <h5 class="card-title">{{roomPrice[2]}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/book" class="btn btn-primary">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- fouth -->
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="{{ url_for('static', filename='image/image4.jpg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="material-symbols-outlined">
+                  bed2
+                  </span>
+                <h5 class="card-title">{{roomPrice[0]}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/book" class="btn btn-primary">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- six -->
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="{{ url_for('static', filename='image/image5bedroom.jpg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="material-symbols-outlined">
+                  bed2
+                  </span>
+                <h5 class="card-title">{{roomPrice[2]}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/book" class="btn btn-primary">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- seven -->
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="{{ url_for('static', filename='image/livingrooms.jpg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="material-symbols-outlined">
+                  bed2
+                  </span>
+                <h5 class="card-title">{{roomPrice[2]}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/book" class="btn btn-primary">Book</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      
+    {% endblock %}
+    <!-- end of body -->
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: black"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Novahealth wellness alliance for Rwanda
+            </h6>
+            <p>
+           We sell you and we hires the best apartments for almost free
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">apartments</a>
+            </p>
+            <p>
+              <a class="text-white">rooms</a>
+            </p>
+            <p>
+              <a class="text-white">constructions</a>
+            </p>
+            <p>
+              <a class="text-white">consultance</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white">Your Account</a>
+            </p>
+            <p>
+              <a class="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a class="text-white">About</a>
+            </p>
+            <p>
+              <a class="text-white">Help</a>
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i>KIGALI, KK 390st, Rwanda</p>
+            <p><i class="fas fa-envelope mr-3"></i>ntirushwajeanmarc@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i>+250 785 097 557</p>
+            
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2024 Copyright:
+              <a class="text-white" href="/"
+                 >Novahealth.com</a
+                >
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a href="https://web.facebook.com/reid.back.10/"
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+
+            <!-- Google -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fab fa-google"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+              <!-- tik tock -->
+              <a
+              class="btn btn-outline-light btn-floating m-1"
+              class="text-white"
+              role="button"
+              ><i class="fab fa-tiktok"></i
+             ></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+<!-- </div> -->
+<!-- End of .container -->
+            
+    <!-- end footer -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

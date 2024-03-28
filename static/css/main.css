@@ -1,0 +1,24 @@
+.col-md-4{
+margin-bottom: 15px;
+}
+.container{
+
+    padding: 60px;
+}
+.mk{
+    margin: 12px;
+}
+.form-group{
+    margin: 12px;
+    
+}
+.form-control{
+    border: solid rgb(79, 78, 78);
+}
+.clr{
+    color: white;
+    background-color:  #282828;
+    padding: 100px;
+    margin: 20px;
+
+}

@@ -1,0 +1,25 @@
+{%extends 'home.html'%}
+{% block title %}admin page{% endblock %}
+{% block body %}
+<h1>{{user}}</h1>
+
+
+<div class="container clr">
+<div class="row">
+
+{%for booking in bookings%}
+     <h1>Message</h1>
+    <h5>From {{booking.name}} with email: {{booking.email}}</h5>
+    <p>
+      the checkin_date: {{booking.checkin_date}}<br>
+      the checkout_date: {{booking.checkout_date}}<br>
+      the message: {{booking.message}}<br>
+    </p>
+
+{%endfor%}
+</div>
+</div>
+{%endblock%}
+
+
+   
